@@ -1,4 +1,16 @@
-<h2>Comments:</h2>
+
+
+<div class="card mb-3 mx-3">
+  <div class="card-body">
+    <h2>Comments:</h2>
 <% comments.each do |comment| %>
-  <p><%= comment.body %></p>
+  <div class="card mb-3 mx-3">
+  <div class="card-body">
+    <p>User <%= comment.user_id %> says: <%= comment.body %></p>
+  </div>
+</div>
+
+  
 <% end %>
+  </div>
+</div>

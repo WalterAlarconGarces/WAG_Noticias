@@ -1,10 +1,22 @@
-<h2>Add a comment:</h2>
+
+
+
+<div class="card mb-3 mx-3">
+  <div class="card-body">
+    <div class="mb-3 mx-3">
+  <label for="exampleFormControlInput1" class="form-label">Add a comment as user <%=current_user.id%>:</label>
+</div>
 <%= form_with(model: [ commentable, Comment.new(commentable: commentable) ], local: true) do |form| %>
   <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
+    
+    <%= form.text_area :body, class: "form-control" %>
   </div>
-  <div class="actions">
-    <%= form.submit "Comment" %>
+  <div class="field">
+    <%= form.number_field :user_id  , class: "form-control", value: current_user.id, type: :hidden%>
+  </div>
+  <div class="actions text-end mx-3">
+    <%= form.submit "Comment", class: "btn btn-primary"%>
   </div>
 <% end %>
+  </div>
+</div>

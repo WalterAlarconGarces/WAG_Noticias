@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+body {
+    background-color: rgb(74, 129, 201);
+}
+ .navbar {
+    background-color: rgb(30, 173, 255);
+}
+.btn {
+    background-color:  rgb(52, 90, 141);
+}
+.btn-danger {
+    background-color: brown;
+}
+.btn-outline-success {
+    color: white;
+}

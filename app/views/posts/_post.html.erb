@@ -1,10 +1,22 @@
 <div id="<%= dom_id post %>">
-  <div class="card mb-3 mx-3" style="width: 18rem;">
+  <div class="card mb-3 mx-3">
+  <div class="card-header">
+    <h5 class="card-title">Title: <%= post.title %></h5>
+    </div>
   <div class="card-body">
-    <h5 class="card-title"><%= post.title %></h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary"><%= post.user_id %></h6>
+    <h6 class="card-subtitle mb-2 text-body-secondary">Post by user: <%= post.user_id %></h6>
     <p class="card-text"><%= post.body %></p>
-    <%= link_to "Show this post", post %>
+
+  <div class="container text-end">
+  <div class="row row-cols-end">
+    <div class="col"><%= link_to "Show this post", post , class: "btn btn-primary"%> </div>
+    <div class="col"><%= link_to "Edit this post", edit_post_path(post.id) , class: "btn btn-primary"%></div>
+    <div class="col"><%= button_to "Destroy this post", @post, method: :delete , class: "btn btn-danger"%></div>
+    
+  </div>
+</div>
+
+
     
   </div>
 </div>
