@@ -2,6 +2,9 @@
 
 <%= render @post %>
 
+<%= render partial: 'shared/comment_form', locals: { commentable: @post}%>
+<%= render partial: 'shared/comments', locals: { comments: @comments}%>
+
 <div>
   <%= link_to "Edit this post", edit_post_path(@post) %> |
   <%= link_to "Back to posts", posts_path %>
