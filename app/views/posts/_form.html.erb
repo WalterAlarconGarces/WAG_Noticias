@@ -22,10 +22,10 @@
   </div>
 
   <div class="col">
-    <%= form.label :user_id, style: "display: block", class: "form-label" %>
-    <%= form.number_field :user_id  , class: "form-control"%>
+    
+    <%= form.number_field :user_id  , class: "form-control", value: current_user.id, type: :hidden%>
   </div>
-
+  
   <div class="col text-end">
     <%= form.submit class: "btn btn-primary" %>
   </div>
