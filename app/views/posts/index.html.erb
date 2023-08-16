@@ -2,9 +2,36 @@
 
 <h1>Posts</h1>
 
+
+<div class="container text-end">
+  <div class="row text-end">
+    
+    <div class="col">
+      <%== pagy_info(@pagy) %>
+    </div>
+    <div class="col">
+      <%== pagy_bootstrap_nav(@pagy) %>
+    </div>
+  </div>
+</div>
+
+
+
+
 <div id="posts">
   <% @posts.each do |post| %>
     <%= render post %>
   <% end %>
 </div>
 
+<div class="container text-end">
+  <div class="row text-end">
+    <div class="col text-end">
+      
+    </div>
+    
+    <div class="col text-end">
+      <%== pagy_bootstrap_nav(@pagy) %>
+    </div>
+  </div>
+</div>

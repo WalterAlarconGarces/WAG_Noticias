@@ -72,3 +72,5 @@ group :test do
 end
 
 gem 'devise', '~> 4.9', '>= 4.9.2'
+gem "pg_search", "~> 2.3"
+gem 'pagy', '~> 6.0', '>= 6.0.4'
