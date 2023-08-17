@@ -18,29 +18,28 @@ default: &default
   adapter: postgresql
   encoding: unicode
 
-  username: rvrjuaznjmemsj
-  password: 4225be45ee320cffd77b48428e79fed799a6f5bc10b5c9e15321ccab0ee5910f
+  username: postgres
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: dbve463spvdoj6
+  database: WAG_Noticias_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  username: rvrjuaznjmemsj
+  username: WAG_Noticias
 
   # The password associated with the postgres role (username).
-  password: 4225be45ee320cffd77b48428e79fed799a6f5bc10b5c9e15321ccab0ee5910f
+  password: Euco8785
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
-  host: ec2-3-210-173-88.compute-1.amazonaws.com
+  host: localhost
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
@@ -84,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: dbve463spvdoj6
-  username: rvrjuaznjmemsj
-  password: 4225be45ee320cffd77b48428e79fed799a6f5bc10b5c9e15321ccab0ee5910f
+  database: WAG_Noticias_production
+  username: WAG_Noticias
+  password: <%= ENV["WAG_NOTICIAS_DATABASE_PASSWORD"] %>
