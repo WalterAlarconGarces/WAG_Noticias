@@ -10,7 +10,9 @@
       <%== pagy_info(@pagy) %>
     </div>
     <div class="col">
+    <%if @pagy.pages > 1 %>
       <%== pagy_bootstrap_nav(@pagy) %>
+      <%end%>
     </div>
   </div>
 </div>
@@ -31,7 +33,9 @@
     </div>
     
     <div class="col text-end">
+    <%if @pagy.pages > 2 %>
       <%== pagy_bootstrap_nav(@pagy) %>
+      <%end%>
     </div>
   </div>
 </div>
