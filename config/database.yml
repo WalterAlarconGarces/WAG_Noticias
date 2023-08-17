@@ -86,4 +86,4 @@ production:
   <<: *default
   database: dbve463spvdoj6
   username: rvrjuaznjmemsj
-  password: <%= ENV["WAG_NOTICIAS_DATABASE_PASSWORD"] %>
+  password: 4225be45ee320cffd77b48428e79fed799a6f5bc10b5c9e15321ccab0ee5910f
