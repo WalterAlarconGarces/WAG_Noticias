@@ -28,9 +28,13 @@
           </li>
         <%end%>
       </ul>
+      <%if user_signed_in?%>
       <div class="mx-3">
       <h6>Welcome <%=current_user.email%>, user ID:<%=current_user.id%>  </h6>
       </div>
+      <%end%>
+
+
       <%= form_with url: posts_path, method: :get do |form|%>
         <%= form.text_field :query_text, placeholder: 'Title or body', value: params[:query_text]%>
         <button class="btn btn-outline-info" type="submit">Search</button>
